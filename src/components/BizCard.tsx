@@ -7,23 +7,21 @@ type Props = {
 
 export function BizCard({ onOpen }: Props) {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center px-6 py-12">
+    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
       <button type="button" onClick={onOpen} className="biz-card-shell cursor-pointer">
         <div className="biz-card-inner">
           <div className="relative mx-auto mb-5 h-24 w-24">
-            <div className="avatar-ring h-full w-full">
-              <div className="avatar-inner text-2xl">{personal.initials}</div>
-            </div>
-            <span className="absolute bottom-0 right-0 h-4 w-4 rounded-full border-2 border-[#0f172a] bg-emerald-400 shadow-[0_0_10px_#34d399]" />
+            <div className="avatar h-full w-full text-2xl">{personal.initials}</div>
+            <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-[#1c2128] bg-[#3fb950]" />
           </div>
 
-          <h1 className="mb-1 text-2xl font-bold text-white">{personal.name}</h1>
-        <p className="mb-1 text-sm text-muted">
-          {personal.title} · {personal.subtitle}
-        </p>
-        <p className="mb-5 text-xs font-medium text-emerald-400">
-          {personal.totalExperience} · {personal.experiencePeriod}
-        </p>
+          <h1 className="mb-1 text-2xl font-semibold">{personal.name}</h1>
+          <p className="mb-1 text-sm text-muted">
+            {personal.title} · {personal.subtitle}
+          </p>
+          <p className="mb-5 text-xs text-dim">
+            {personal.totalExperience} · {personal.experiencePeriod}
+          </p>
 
           <div className="mb-5 flex justify-center gap-2">
             {[Code2, Workflow, FileText, User].map((Icon, i) => (

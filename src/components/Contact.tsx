@@ -3,12 +3,10 @@ import { personal } from "../data/portfolio";
 
 export function Contact() {
   return (
-    <section id="contact" className="px-6 py-24">
+    <section id="contact" className="section-band px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <span className="section-label">Contact</span>
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          <span className="gradient-text-warm">Let's connect</span>
-        </h2>
+        <h2 className="section-title">Let's connect</h2>
         <p className="mt-3 max-w-xl text-muted">
           Open to full-time opportunities. Share your role and timeline — I'll
           reply with an honest take on fit.
@@ -16,7 +14,7 @@ export function Contact() {
 
         <a
           href={`mailto:${personal.email}`}
-          className="mt-8 inline-block text-xl text-cyan-400 underline underline-offset-4 transition-colors hover:text-cyan-300"
+          className="mt-8 inline-block text-lg text-accent link-subtle"
         >
           {personal.email}
         </a>
@@ -36,36 +34,32 @@ export function Contact() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card flex items-center justify-between p-4 text-sm transition-colors hover:!border-cyan-400/40"
+            className="glass-card flex items-center justify-between p-4 text-sm"
           >
             LinkedIn
-            <span className="text-cyan-400">
-              Connect <ArrowRight size={14} className="inline" />
-            </span>
+            <ExternalLink size={14} className="text-dim" />
           </a>
           <a
             href={`mailto:${personal.email}`}
-            className="glass-card flex items-center justify-between p-4 text-sm transition-colors hover:!border-violet-400/40"
+            className="glass-card flex items-center justify-between p-4 text-sm"
           >
             Email
-            <Mail size={14} className="text-violet-400" />
+            <Mail size={14} className="text-dim" />
           </a>
           <a
             href={personal.resumeUrl}
             download="Rahul_Gautam_Resume.pdf"
-            className="glass-card flex items-center justify-between p-4 text-sm transition-colors hover:!border-amber-400/40"
+            className="glass-card flex items-center justify-between p-4 text-sm"
           >
             Resume
-            <span className="text-amber-400">
-              PDF <Download size={14} className="inline" />
-            </span>
+            <Download size={14} className="text-dim" />
           </a>
           <a
             href={`tel:${personal.phone.replace(/\s/g, "")}`}
-            className="glass-card flex items-center justify-between p-4 text-sm transition-colors hover:!border-rose-400/40"
+            className="glass-card flex items-center justify-between p-4 text-sm"
           >
             Phone
-            <Phone size={14} className="text-rose-400" />
+            <Phone size={14} className="text-dim" />
           </a>
         </div>
       </div>
@@ -75,7 +69,7 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 px-6 py-8">
+    <footer className="border-t border-[#21262d] px-6 py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-xs text-dim">
           © {new Date().getFullYear()} {personal.name} — 8+ years building
@@ -86,14 +80,14 @@ export function Footer() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-dim transition-colors hover:text-cyan-400"
+            className="text-dim transition-colors hover:text-accent"
             aria-label="LinkedIn"
           >
             <ExternalLink size={16} />
           </a>
           <a
             href={`mailto:${personal.email}`}
-            className="text-dim transition-colors hover:text-cyan-400"
+            className="text-dim transition-colors hover:text-accent"
             aria-label="Email"
           >
             <Mail size={16} />

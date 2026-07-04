@@ -34,32 +34,29 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-7 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-7 z-50 transition-all duration-200 ${
         scrolled
-          ? "border-b border-white/5 bg-[#070b14]/85 backdrop-blur-xl"
+          ? "border-b border-[#21262d] bg-[#0f1419]/95 backdrop-blur-sm"
           : ""
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2.5 text-sm font-semibold">
-          <span className="avatar-ring flex h-8 w-8 items-center justify-center">
-            <span className="avatar-inner text-[0.65rem]">{personal.initials}</span>
-          </span>
+        <a href="#top" className="flex items-center gap-2.5 text-sm font-medium">
+          <span className="avatar flex h-8 w-8 text-xs">{personal.initials}</span>
           {personal.name}
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => {
             const id = link.href.slice(1);
-            const isActive = activeSection === id;
             return (
               <a
                 key={link.href}
                 href={link.href}
                 className={`text-sm transition-colors ${
-                  isActive
-                    ? "font-medium text-cyan-400"
-                    : "text-muted hover:text-cyan-300"
+                  activeSection === id
+                    ? "font-medium text-accent"
+                    : "text-muted hover:text-[#e6edf3]"
                 }`}
               >
                 {link.label}
@@ -73,8 +70,7 @@ export function Header() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-1.5 text-sm text-muted transition-colors hover:text-cyan-400 sm:flex"
-            aria-label="LinkedIn profile"
+            className="hidden items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent sm:flex"
           >
             <ExternalLink size={14} />
             LinkedIn
@@ -82,7 +78,7 @@ export function Header() {
           <a
             href={personal.resumeUrl}
             download="Rahul_Gautam_Resume.pdf"
-            className="hidden items-center gap-1.5 text-sm text-muted transition-colors hover:text-cyan-400 sm:flex"
+            className="hidden items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent sm:flex"
           >
             <Download size={14} />
             Resume

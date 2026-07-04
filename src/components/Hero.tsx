@@ -3,52 +3,47 @@ import { heroBadges, personal, stats } from "../data/portfolio";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden px-6 pb-16 pt-28">
-      <div className="hero-bg" />
-
-      <div className="relative mx-auto max-w-6xl">
+    <section id="top" className="px-6 pb-16 pt-28">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col gap-8 md:flex-row md:items-start">
           <div className="relative shrink-0">
-            <div className="avatar-ring h-28 w-28 md:h-32 md:w-32">
-              <div className="avatar-inner text-3xl">{personal.initials}</div>
+            <div className="avatar h-28 w-28 text-3xl md:h-32 md:w-32">
+              {personal.initials}
             </div>
-            <span className="absolute bottom-0 right-0 h-5 w-5 rounded-full border-[3px] border-[#070b14] bg-emerald-400 shadow-[0_0_12px_#34d399]" />
+            <span className="absolute bottom-0 right-0 h-4 w-4 rounded-full border-2 border-[#0f1419] bg-[#3fb950]" />
           </div>
 
           <div className="flex-1">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              <span className="gradient-text">{personal.name}</span>
+            <h1 className="text-4xl font-semibold tracking-tight text-[#e6edf3] sm:text-5xl">
+              {personal.name}
             </h1>
-            <p className="mt-2 text-lg text-slate-300">
+            <p className="mt-2 text-lg text-muted">
               {personal.title} · {personal.subtitle}
             </p>
-            <p className="mt-1 text-sm font-medium text-emerald-400/90">
-              {personal.totalExperience} Total Experience · {personal.experiencePeriod}
+            <p className="mt-1 text-sm text-muted">
+              {personal.totalExperience} total experience · {personal.experiencePeriod}
             </p>
             <a
               href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 inline-flex items-center gap-1.5 text-sm text-cyan-400/80 transition-colors hover:text-cyan-300"
+              className="mt-2 inline-flex items-center gap-1.5 text-sm link-subtle"
             >
               <ExternalLink size={14} />
               linkedin.com/in/rahul-gautam-1bbb20136
             </a>
 
-            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-200 sm:text-2xl">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#c9d1d9] sm:text-xl">
               {personal.heroTagline}
             </p>
 
-            <p className="mt-3 font-mono text-xs uppercase tracking-widest text-violet-300/70">
+            <p className="mt-3 font-mono text-xs uppercase tracking-wider text-dim">
               {personal.heroTrust}
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
-              {heroBadges.map((badge, i) => (
-                <span
-                  key={badge}
-                  className={i % 2 === 0 ? "pill" : "pill pill-violet"}
-                >
+              {heroBadges.map((badge) => (
+                <span key={badge} className="pill">
                   {badge}
                 </span>
               ))}
@@ -59,7 +54,7 @@ export function Hero() {
             </p>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              <span className="pill pill-amber">{personal.location}</span>
+              <span className="pill">{personal.location}</span>
               <span className="pill">{personal.availabilityDetail}</span>
             </div>
 
@@ -78,7 +73,7 @@ export function Hero() {
                 href={personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-violet-400/90 underline underline-offset-4 transition-colors hover:text-violet-300"
+                className="inline-flex items-center gap-1.5 text-sm link-subtle"
               >
                 <ExternalLink size={14} />
                 Connect on LinkedIn
@@ -86,7 +81,7 @@ export function Hero() {
               <a
                 href={personal.resumeUrl}
                 download="Rahul_Gautam_Resume.pdf"
-                className="inline-flex items-center gap-1.5 text-sm text-cyan-400/80 underline underline-offset-4 transition-colors hover:text-cyan-300"
+                className="inline-flex items-center gap-1.5 text-sm link-subtle"
               >
                 <Download size={14} />
                 Download résumé (PDF)
@@ -98,7 +93,7 @@ export function Hero() {
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="stat-card">
-              <p className="stat-value text-3xl font-bold sm:text-4xl">{stat.value}</p>
+              <p className="stat-value text-2xl font-semibold sm:text-3xl">{stat.value}</p>
               <p className="mt-1 font-mono text-[0.65rem] uppercase tracking-wider text-dim">
                 {stat.label}
               </p>
