@@ -2,7 +2,7 @@
 
 Personal portfolio website built with React, TypeScript, Vite, and Tailwind CSS.
 
-**Live site (after deploy):** https://rahulgautam.github.io/rahul-gautam-portfolio/
+**Live site (after deploy):** https://rahulgautam034.github.io/rahul-gautam-portfolio/
 
 ## Run locally
 
