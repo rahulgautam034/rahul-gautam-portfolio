@@ -5,7 +5,9 @@ export function Experience() {
     <section id="experience" className="section-band px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <span className="section-label">Experience</span>
-        <h2 className="section-title">{personal.totalExperience} of delivery</h2>
+        <h2 className="section-title">
+          <span className="section-title-accent">{personal.totalExperience}</span> of delivery
+        </h2>
         <p className="mt-2 text-sm text-muted">
           Cumulative experience since {personal.experienceSince} · {personal.experiencePeriod}
         </p>

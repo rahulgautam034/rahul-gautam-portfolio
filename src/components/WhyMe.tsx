@@ -5,10 +5,12 @@ const icons = [Layers, Target, Globe, Users];
 
 export function WhyMe() {
   return (
-    <section id="why-me" className="section-band px-6 py-24">
+    <section id="why-me" className="section-alt px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <span className="section-label">Why me</span>
-        <h2 className="section-title">Why teams hire me</h2>
+        <h2 className="section-title">
+          Why <span className="section-title-accent">teams</span> hire me
+        </h2>
         <p className="mt-3 max-w-2xl text-muted">
           You get a senior engineer who owns delivery — clear communication,
           honest estimates, and code your team can maintain.

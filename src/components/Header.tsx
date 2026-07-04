@@ -36,14 +36,14 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-7 z-50 transition-all duration-200 ${
         scrolled
-          ? "border-b border-[#21262d] bg-[#0f1419]/95 backdrop-blur-sm"
+          ? "border-b border-[#1e2a3d] bg-[#0b1120]/90 backdrop-blur-md"
           : ""
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2.5 text-sm font-medium">
+        <a href="#top" className="flex items-center gap-2.5 text-sm font-semibold">
           <span className="avatar flex h-8 w-8 text-xs">{personal.initials}</span>
-          {personal.name}
+          <span className="hidden sm:inline">{personal.name.split(" ")[0]}</span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -55,8 +55,8 @@ export function Header() {
                 href={link.href}
                 className={`text-sm transition-colors ${
                   activeSection === id
-                    ? "font-medium text-accent"
-                    : "text-muted hover:text-[#e6edf3]"
+                    ? "font-semibold text-accent"
+                    : "text-muted hover:text-[#f1f5f9]"
                 }`}
               >
                 {link.label}

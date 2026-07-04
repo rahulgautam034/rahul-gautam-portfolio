@@ -15,7 +15,7 @@ export function About() {
         </p>
 
         <div className="experience-highlight">
-          <p className="text-2xl font-semibold">{personal.totalExperience}</p>
+          <p className="highlight-value">{personal.totalExperience}</p>
           <div>
             <p className="text-sm font-medium">Total professional experience</p>
             <p className="text-xs text-dim">{personal.experiencePeriod}</p>

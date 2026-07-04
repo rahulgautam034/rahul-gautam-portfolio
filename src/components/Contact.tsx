@@ -34,14 +34,14 @@ export function Contact() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card flex items-center justify-between p-4 text-sm"
+            className="glass-card contact-card flex items-center justify-between p-4 text-sm"
           >
             LinkedIn
             <ExternalLink size={14} className="text-dim" />
           </a>
           <a
             href={`mailto:${personal.email}`}
-            className="glass-card flex items-center justify-between p-4 text-sm"
+            className="glass-card contact-card flex items-center justify-between p-4 text-sm"
           >
             Email
             <Mail size={14} className="text-dim" />
@@ -49,14 +49,14 @@ export function Contact() {
           <a
             href={personal.resumeUrl}
             download="Rahul_Gautam_Resume.pdf"
-            className="glass-card flex items-center justify-between p-4 text-sm"
+            className="glass-card contact-card flex items-center justify-between p-4 text-sm"
           >
             Resume
             <Download size={14} className="text-dim" />
           </a>
           <a
             href={`tel:${personal.phone.replace(/\s/g, "")}`}
-            className="glass-card flex items-center justify-between p-4 text-sm"
+            className="glass-card contact-card flex items-center justify-between p-4 text-sm"
           >
             Phone
             <Phone size={14} className="text-dim" />

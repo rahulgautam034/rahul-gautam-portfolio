@@ -2,10 +2,12 @@ import { offers } from "../data/portfolio";
 
 export function Offers() {
   return (
-    <section id="offers" className="px-6 py-24">
+    <section id="offers" className="section-band px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <span className="section-label">Strengths</span>
-        <h2 className="section-title">What I bring to your team</h2>
+        <h2 className="section-title">
+          What I bring to <span className="section-title-accent">your team</span>
+        </h2>
         <p className="mt-3 max-w-2xl text-muted">
           From backend microservices to React product UIs — the full-stack
           expertise to match your team's needs.
