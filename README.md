@@ -2,14 +2,14 @@
 
 Personal portfolio website built with React, TypeScript, Vite, and Tailwind CSS.
 
+**Live site (after deploy):** https://rahulgautam.github.io/rahul-gautam-portfolio/
+
 ## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Build for production
 
@@ -18,13 +18,36 @@ npm run build
 npm run preview
 ```
 
-## Deploy
+## Deploy to GitHub Pages
 
-The `dist/` folder after `npm run build` can be deployed to:
+This repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds and publishes automatically on every push to `main`.
 
-- **GitHub Pages** — push to a repo and enable Pages from the `dist` branch/folder
-- **Vercel** — import the repo and deploy
-- **Netlify** — drag & drop the `dist` folder or connect the repo
+### One-time setup
+
+1. **Create a GitHub repo** named `rahul-gautam-portfolio` under your account  
+   https://github.com/new
+
+2. **Push this project** (from this folder):
+
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/rahul-gautam-portfolio.git
+   git push -u origin main
+   ```
+
+   Use GitHub CLI (`gh auth login`) or a [Personal Access Token](https://github.com/settings/tokens) if prompted for credentials.
+
+3. **Enable GitHub Pages**
+   - Repo → **Settings** → **Pages**
+   - **Source:** GitHub Actions
+
+4. After the workflow completes (~1–2 min), your site will be live at:  
+   `https://YOUR_USERNAME.github.io/rahul-gautam-portfolio/`
+
+### Manual build (optional)
+
+```bash
+npm run build:pages
+```
 
 ## Customize
 
